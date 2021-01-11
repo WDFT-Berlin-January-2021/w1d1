@@ -3,7 +3,7 @@
 const hacker1 = 'Marco';
 console.log("The driver's name is ", hacker1);
 
-const hacker2 = 'Marco';
+const hacker2 = 'Seamus';
 console.log("The navigator's name is ", hacker2);
 
 // Iteration 2: Conditionals
@@ -37,8 +37,9 @@ if (nameCompared === -1) {
     console.log(`The driver's name goes first.`);
 } else if (nameCompared === 1) {
     console.log(`Yo, the navigator goes first definitely.`);
+} else {
+    console.log(`What?! You both have the same name?`);
 }
-console.log(`What?! You both have the same name?`);
 
 // BONUS
 
@@ -59,11 +60,9 @@ const lowerCased = phraseToCheck.toLowerCase().replace(re, '');
 let reversed = lowerCased.split('').reverse().join('');
 
 // if the phrase starts with upper case than the reversed too
-if (phraseToCheck[0] === phraseToCheck[0].toUpperCase()) {
-    reversed = reversed[0].toUpperCase() + reversed.slice(1);
-}
-
-console.log(reversed);
+// if (phraseToCheck[0] === phraseToCheck[0].toUpperCase()) {
+//     reversed = reversed[0].toUpperCase() + reversed.slice(1);
+// }
 
 if (lowerCased == reversed.toLowerCase()) {
     console.log('This phrase is a palindrome!');
