@@ -23,10 +23,14 @@ if (hacker1.length > hacker2.length) {
 }
 
 // Iteration 3: Loops
-console.log(hacker1.toLocaleUpperCase().split('').join(' '));
+// 3.1
+console.log(hacker1.toUpperCase().split('').join(' '));
 
-console.log(hacker2.split('').reverse().join(''));
+// 3.2
+const revHacker2 = hacker2.toLowerCase().split('').reverse().join('');
+console.log(revHacker2[0].toUpperCase() + revHacker2.slice(1));
 
+// 3.3
 const nameCompared = hacker1.localeCompare(hacker2);
 
 if (nameCompared === -1) {
@@ -47,11 +51,11 @@ if (nameCompared === -1) {
 //   - "step on no pets"
 //   - "taco cat"
 
-const phraseToCheck = 'step on no pets';
+const phraseToCheck = 'A man, a plan, a canal, Panama!';
 
 var re = /[\W_]/g;
 
-const lowerCased = phraseToCheck.toLowerCase().replace(re, ' ');
+const lowerCased = phraseToCheck.toLowerCase().replace(re, '');
 
 let reversed = lowerCased.split('').reverse().join('');
 
