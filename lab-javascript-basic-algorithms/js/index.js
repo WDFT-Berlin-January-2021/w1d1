@@ -37,8 +37,8 @@ if (nameCompared === -1) {
     console.log(`What?! You both have the same name?`);
 }
 
-//BONUS
-// #### Bonus 2:
+// BONUS
+
 // Create a new variable `phraseToCheck` and have it contain some string value. Write a code that will check if the value we assigned to this variable is a [Palindrome](https://en.wikipedia.org/wiki/Palindrome). Here are some examples of palindromes:
 //   - "A man, a plan, a canal, Panama!"
 //   - "Amor, Roma"
@@ -47,21 +47,22 @@ if (nameCompared === -1) {
 //   - "step on no pets"
 //   - "taco cat"
 
-const phraseToCheck = 'race car';
+const phraseToCheck = 'step on no pets';
 
 var re = /[\W_]/g;
 
 const lowerCased = phraseToCheck.toLowerCase().replace(re, ' ');
 
-let reversed = lowerCased.split(' ').reverse().join(' ');
+let reversed = lowerCased.split('').reverse().join('');
 
+// if the phrase starts with upper case than the reversed too
 if (phraseToCheck[0] === phraseToCheck[0].toUpperCase()) {
     reversed = reversed[0].toUpperCase() + reversed.slice(1);
 }
 
 console.log(reversed);
 
-if (phraseToCheck == reversed) {
+if (lowerCased == reversed.toLowerCase()) {
     console.log('This phrase is a palindrome!');
 } else {
     console.log('This phrase is not a palindrome');
