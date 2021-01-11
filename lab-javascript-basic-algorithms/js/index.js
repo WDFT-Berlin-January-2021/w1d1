@@ -48,13 +48,13 @@ if (nameCompared1 === -1) {
 //   - "step on no pets"
 //   - "taco cat"
 
-const phraseToCheck = 'roma amor';
+const phraseToCheck = 'Roma amor';
 
 var re = /[\W_]/g;
 
 const lowerCased = phraseToCheck.toLowerCase().replace(re, ' ');
 
-const reversed = lowerCased.split('').reverse().join('');
+let reversed = lowerCased.split('').reverse().join('');
 
 if (phraseToCheck[0] === phraseToCheck[0].toLocaleUpperCase()) {
     reversed = reversed[0].toUpperCase() + reversed.slice(1);
