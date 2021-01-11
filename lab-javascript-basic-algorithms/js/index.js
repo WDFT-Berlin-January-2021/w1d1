@@ -27,13 +27,11 @@ console.log(hacker1.toLocaleUpperCase().split('').join(' '));
 
 console.log(hacker2.split('').reverse().join(''));
 
-const nameCompared1 = hacker1.localeCompare(hacker2);
-const nameCompared2 = hacker2.localeCompare(hacker1);
-console.log('', nameCompared1);
-console.log('', nameCompared2);
-if (nameCompared1 === -1) {
+const nameCompared = hacker1.localeCompare(hacker2);
+
+if (nameCompared === -1) {
     console.log(`The driver's name goes first.`);
-} else if (nameCompared1 === 1) {
+} else if (nameCompared === 1) {
     console.log(`Yo, the navigator goes first definitely.`);
 } else {
     console.log(`What?! You both have the same name?`);
