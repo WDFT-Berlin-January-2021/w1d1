@@ -48,7 +48,7 @@ if (nameCompared1 === -1) {
 //   - "step on no pets"
 //   - "taco cat"
 
-const phraseToCheck = 'A man, a plan, a canal. Panama';
+const phraseToCheck = 'roma amor';
 
 var re = /[\W_]/g;
 
@@ -56,10 +56,13 @@ const lowerCased = phraseToCheck.toLowerCase().replace(re, ' ');
 
 const reversed = lowerCased.split('').reverse().join('');
 
-const upperCased = reversed[0].toUpperCase() + reversed.slice(1);
-console.log(upperCased);
+if (phraseToCheck[0] === phraseToCheck[0].toLocaleUpperCase()) {
+    reversed = reversed[0].toUpperCase() + reversed.slice(1);
+}
 
-if (lowerCased == upperCased) {
+console.log(reversed);
+
+if (lowerCased == reversed) {
     console.log('This phrase is a palindrome!');
 } else {
     console.log('This phrase is not a palindrome');
