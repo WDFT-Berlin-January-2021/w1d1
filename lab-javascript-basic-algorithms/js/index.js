@@ -56,7 +56,7 @@ const lowerCased = phraseToCheck.toLowerCase().replace(re, ' ');
 
 const reversed = lowerCased.split('').reverse().join('');
 
-const upperCased = reversed[0].toUpperCase();
+const upperCased = reversed[0].toUpperCase() + reversed.slice(1);
 console.log(upperCased);
 
 if (lowerCased == upperCased) {
