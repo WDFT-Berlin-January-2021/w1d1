@@ -56,13 +56,13 @@ const lowerCased = phraseToCheck.toLowerCase().replace(re, ' ');
 
 let reversed = lowerCased.split('').reverse().join('');
 
-if (phraseToCheck[0] === phraseToCheck[0].toLocaleUpperCase()) {
+if (phraseToCheck[0] === phraseToCheck[0].toUpperCase()) {
     reversed = reversed[0].toUpperCase() + reversed.slice(1);
 }
 
 console.log(reversed);
 
-if (lowerCased == reversed) {
+if (phraseToCheck == reversed) {
     console.log('This phrase is a palindrome!');
 } else {
     console.log('This phrase is not a palindrome');
